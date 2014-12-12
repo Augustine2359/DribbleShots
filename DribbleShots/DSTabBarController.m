@@ -32,7 +32,8 @@
   DLog(@"%d", dribbleShotType);
   [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
                                              onPage:1 success:^(NSArray *shots) {
-                                               DLog(@"%@", shots);
+                                               [[DSDataManager sharedInstance] getShotsOfType:dribbleShotType];
+//                                               DLog(@"%@", shots);
                                              }];
 }
 

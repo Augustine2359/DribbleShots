@@ -11,6 +11,8 @@
 @interface DSDataManager : NSObject
 
 + (instancetype)sharedInstance;
-- (void)addShotsToModel:(NSArray *)shots;
+- (void)addShotsToModel:(NSArray *)shots
+               shotType:(DribbleShotType)dribbleShotType;
+- (NSArray *)getShotsOfType:(DribbleShotType)dribbleShotType;
 
 @end

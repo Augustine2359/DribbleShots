@@ -44,8 +44,11 @@
     parameters:parameters
        success:^(AFHTTPRequestOperation *operation, id responseObject) {
          NSArray *shots = responseObject[@"shots"];
+         [[DSDataManager sharedInstance] addShotsToModel:shots shotType:dribbleShotType];
+         
          if (success)
            success(shots);
+         
        }
        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          DLog(@"%@", operation);

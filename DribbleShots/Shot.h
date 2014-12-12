@@ -15,5 +15,6 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * imageURL;
 @property (nonatomic, retain) NSNumber * dribbleShotType;
+@property (nonatomic, retain) NSDate * createdAt;
 
 @end

@@ -14,5 +14,6 @@
 @dynamic title;
 @dynamic imageURL;
 @dynamic dribbleShotType;
+@dynamic createdAt;
 
 @end

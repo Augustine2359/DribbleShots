@@ -18,6 +18,10 @@
 		F923CF741A3AD50A0029C1F2 /* DSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */; };
 		F923CF771A3ADF720029C1F2 /* DSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF761A3ADF720029C1F2 /* DSNavigationViewController.m */; };
 		F923CF7A1A3AE0FA0029C1F2 /* DSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF791A3AE0FA0029C1F2 /* DSTableViewController.m */; };
+		F923CF7D1A3AE2940029C1F2 /* DSModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F923CF7B1A3AE2940029C1F2 /* DSModel.xcdatamodeld */; };
+		F923CF801A3AE35B0029C1F2 /* DSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF7F1A3AE35B0029C1F2 /* DSDataManager.m */; };
+		F923CF821A3AE48D0029C1F2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F923CF811A3AE48D0029C1F2 /* CoreData.framework */; };
+		F923CF9A1A3AEDE70029C1F2 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF991A3AEDE70029C1F2 /* Shot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		F923CF761A3ADF720029C1F2 /* DSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationViewController.m; sourceTree = "<group>"; };
 		F923CF781A3AE0FA0029C1F2 /* DSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewController.h; sourceTree = "<group>"; };
 		F923CF791A3AE0FA0029C1F2 /* DSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewController.m; sourceTree = "<group>"; };
+		F923CF7C1A3AE2940029C1F2 /* DSModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DSModel.xcdatamodel; sourceTree = "<group>"; };
+		F923CF7E1A3AE35B0029C1F2 /* DSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDataManager.h; sourceTree = "<group>"; };
+		F923CF7F1A3AE35B0029C1F2 /* DSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDataManager.m; sourceTree = "<group>"; };
+		F923CF811A3AE48D0029C1F2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F923CF981A3AEDE70029C1F2 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		F923CF991A3AEDE70029C1F2 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
 		FA1A40F1533A0088B7343634 /* libPods-DribbleShots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbleShots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F923CF821A3AE48D0029C1F2 /* CoreData.framework in Frameworks */,
 				2B1635B44F47982EDFB5862B /* libPods-DribbleShots.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +89,7 @@
 		73F0A5A9DF15D45A76B79BF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F923CF811A3AE48D0029C1F2 /* CoreData.framework */,
 				FA1A40F1533A0088B7343634 /* libPods-DribbleShots.a */,
 			);
 			name = Frameworks;
@@ -125,6 +137,11 @@
 				F923CF791A3AE0FA0029C1F2 /* DSTableViewController.m */,
 				F923CF721A3AD50A0029C1F2 /* DSNetworkManager.h */,
 				F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */,
+				F923CF7E1A3AE35B0029C1F2 /* DSDataManager.h */,
+				F923CF7F1A3AE35B0029C1F2 /* DSDataManager.m */,
+				F923CF7B1A3AE2940029C1F2 /* DSModel.xcdatamodeld */,
+				F923CF981A3AEDE70029C1F2 /* Shot.h */,
+				F923CF991A3AEDE70029C1F2 /* Shot.m */,
 				F923CF491A3ACCC50029C1F2 /* Main.storyboard */,
 				F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */,
 				F923CF4E1A3ACCC50029C1F2 /* LaunchScreen.xib */,
@@ -300,8 +317,11 @@
 				F923CF741A3AD50A0029C1F2 /* DSNetworkManager.m in Sources */,
 				F923CF771A3ADF720029C1F2 /* DSNavigationViewController.m in Sources */,
 				F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */,
+				F923CF9A1A3AEDE70029C1F2 /* Shot.m in Sources */,
 				F923CF7A1A3AE0FA0029C1F2 /* DSTableViewController.m in Sources */,
 				F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */,
+				F923CF801A3AE35B0029C1F2 /* DSDataManager.m in Sources */,
+				F923CF7D1A3AE2940029C1F2 /* DSModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +530,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F923CF7B1A3AE2940029C1F2 /* DSModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F923CF7C1A3AE2940029C1F2 /* DSModel.xcdatamodel */,
+			);
+			currentVersion = F923CF7C1A3AE2940029C1F2 /* DSModel.xcdatamodel */;
+			path = DSModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F923CF311A3ACCC40029C1F2 /* Project object */;
 }
