@@ -7,6 +7,7 @@
 //
 
 #import "DSNetworkManager.h"
+#import <AFNetworking/AFNetworking.h>
 
 @implementation DSNetworkManager
 
@@ -20,6 +21,31 @@
 
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
                success:(void (^)(NSArray *))success {
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  NSString *urlString;
+  switch (dribbleShotType) {
+    case DribbleShotTypeDebuts:
+      urlString = @"http://api.dribbble.com/shots/debuts";
+      break;
+    case DribbleShotTypeEveryone:
+      urlString = @"http://api.dribbble.com/shots/everyone";
+      break;
+    case DribbleShotTypePopular:
+      urlString = @"http://api.dribbble.com/shots/popular";
+      break;
+    default:
+      break;
+  }
+  [manager GET:urlString
+    parameters:nil
+       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+         DLog(@"%@", operation);
+         DLog(@"%@", responseObject);
+       }
+       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         DLog(@"%@", operation);
+         DLog(@"%@", error);
+       }];
 }
 
 @end
