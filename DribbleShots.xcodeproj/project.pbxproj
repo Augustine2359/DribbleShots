@@ -17,6 +17,7 @@
 		F923CF5C1A3ACCC50029C1F2 /* DribbleShotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF5B1A3ACCC50029C1F2 /* DribbleShotsTests.m */; };
 		F923CF671A3ACE000029C1F2 /* DSPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF661A3ACE000029C1F2 /* DSPopularViewController.m */; };
 		F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF6D1A3AD0F60029C1F2 /* DSTabBarController.m */; };
+		F923CF741A3AD50A0029C1F2 /* DSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		F923CF6C1A3AD0F60029C1F2 /* DSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTabBarController.h; sourceTree = "<group>"; };
 		F923CF6D1A3AD0F60029C1F2 /* DSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTabBarController.m; sourceTree = "<group>"; };
 		F923CF711A3AD3780029C1F2 /* DribbleShots-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DribbleShots-Prefix.pch"; sourceTree = "<group>"; };
+		F923CF721A3AD50A0029C1F2 /* DSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNetworkManager.h; sourceTree = "<group>"; };
+		F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				F923CF471A3ACCC50029C1F2 /* DSEveryoneViewController.m */,
 				F923CF681A3ACE170029C1F2 /* DSPopularViewController.h */,
 				F923CF661A3ACE000029C1F2 /* DSPopularViewController.m */,
+				F923CF721A3AD50A0029C1F2 /* DSNetworkManager.h */,
+				F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */,
 				F923CF491A3ACCC50029C1F2 /* Main.storyboard */,
 				F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */,
 				F923CF4E1A3ACCC50029C1F2 /* LaunchScreen.xib */,
@@ -241,6 +246,7 @@
 				F923CF481A3ACCC50029C1F2 /* DSEveryoneViewController.m in Sources */,
 				F923CF421A3ACCC50029C1F2 /* AppDelegate.m in Sources */,
 				F923CF451A3ACCC50029C1F2 /* DSDebutsViewController.m in Sources */,
+				F923CF741A3AD50A0029C1F2 /* DSNetworkManager.m in Sources */,
 				F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */,
 				F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */,
 			);

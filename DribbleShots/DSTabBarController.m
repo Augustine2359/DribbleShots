@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self.delegate = self;
+  
+  [DSNetworkManager sharedInstance];
     // Do any additional setup after loading the view.
 }
 
@@ -26,7 +28,11 @@
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-  DLog(@"first");
+  DribbleShotType dribbleShotType = [self.viewControllers indexOfObject:viewController];
+  DLog(@"%d", dribbleShotType);
+  [[DSNetworkManager sharedInstance] getShotsOfType:DribbleShotTypePopular success:^(NSArray *shots) {
+    ;
+  }];
 }
 
 /*
