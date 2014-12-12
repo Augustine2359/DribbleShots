@@ -52,10 +52,6 @@
     if ([self.context countForFetchRequest:fetchRequest error:&error] > 0) {
       continue;
     }
-
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dribbleShotType == %@", [NSNumber numberWithInteger:dribbleShotType]];
-    fetchRequest.fetchLimit = 0;
-    NSInteger existingRecordsCount = [self.context countForFetchRequest:fetchRequest error:&error];
     
     NSEntityDescription *shotEntityDescription = [NSEntityDescription entityForName:@"Shot"
                                                          inManagedObjectContext:self.context];
@@ -64,11 +60,9 @@
     shot.title = shotDictionary[@"title"];
     shot.imageURL = shotDictionary[@"image_url"];
     shot.dribbleShotType = [NSNumber numberWithInteger:dribbleShotType];
-    shot.createdAt = [self.dateFormatter dateFromString:shotDictionary[@"created_at"]];
     shot.likes = shotDictionary[@"likes_count"];
     shot.playerName = shotDictionary[@"player"][@"name"];
     shot.idNumber = shotDictionary[@"id"];
-    shot.order = [NSNumber numberWithInteger:existingRecordsCount];
     DLog(@"%@", shot);
   }
 }
@@ -76,7 +70,7 @@
 - (NSArray *)getShotsOfType:(DribbleShotType)dribbleShotType {
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Shot"];
   fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dribbleShotType == %@", [NSNumber numberWithInteger:dribbleShotType]];
-  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]];
+  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"idNumber" ascending:NO]];
   NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                              managedObjectContext:self.context
                                                                                                sectionNameKeyPath:nil

@@ -14,10 +14,8 @@
 @dynamic title;
 @dynamic imageURL;
 @dynamic dribbleShotType;
-@dynamic createdAt;
 @dynamic playerName;
 @dynamic likes;
 @dynamic idNumber;
-@dynamic order;
 
 @end
