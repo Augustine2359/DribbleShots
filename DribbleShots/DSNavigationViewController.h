@@ -1,5 +1,5 @@
 //
-//  PopularViewController.h
+//  DSNavigationViewController.h
 //  DribbleShots
 //
 //  Created by Augustine on 12/12/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DSPopularViewController : UIViewController
+@interface DSNavigationViewController : UINavigationController
 
 @end
