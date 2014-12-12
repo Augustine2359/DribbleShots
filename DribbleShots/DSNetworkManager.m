@@ -43,8 +43,9 @@
   [manager GET:urlString
     parameters:parameters
        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-         DLog(@"%@", operation);
-         DLog(@"%@", responseObject);
+         NSArray *shots = responseObject[@"shots"];
+         if (success)
+           success(shots);
        }
        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          DLog(@"%@", operation);

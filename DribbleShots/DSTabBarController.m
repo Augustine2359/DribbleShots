@@ -31,8 +31,8 @@
   DribbleShotType dribbleShotType = [self.viewControllers indexOfObject:viewController];
   DLog(@"%d", dribbleShotType);
   [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
-                                             onPage:2 success:^(NSArray *shots) {
-                                               ;
+                                             onPage:1 success:^(NSArray *shots) {
+                                               DLog(@"%@", shots);
                                              }];
 }
 

@@ -110,7 +110,7 @@
         <scene sceneID="xcr-jT-gh6">
             <objects>
                 <navigationController id="H3k-rI-ZNp" customClass="DSNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Popular" image="error.png" id="P7R-Vr-qzv"/>
+                    <tabBarItem key="tabBarItem" title="Popular" image="first" id="P7R-Vr-qzv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uwb-lp-2C5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -159,7 +159,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="error.png" width="28" height="28"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
