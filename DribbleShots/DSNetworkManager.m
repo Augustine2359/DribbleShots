@@ -8,6 +8,7 @@
 
 #import "DSNetworkManager.h"
 #import <AFNetworking/AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
 
 @implementation DSNetworkManager
 
@@ -54,6 +55,10 @@
          DLog(@"%@", operation);
          DLog(@"%@", error);
        }];
+}
+
+- (void)setImageWithURLString:(NSString *)urlString forImageView:(UIImageView *)imageView {
+  [imageView setImageWithURL:[NSURL URLWithString:urlString]];
 }
 
 @end

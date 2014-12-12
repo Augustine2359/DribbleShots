@@ -7,6 +7,7 @@
 //
 
 #import "DSTableViewController.h"
+#import "DSTableViewCell.h"
 
 @interface DSTableViewController ()
 
@@ -18,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  UINib *nib = [UINib nibWithNibName:@"DSTableViewCell" bundle:[NSBundle mainBundle]];
+  [self.tableView registerNib:nib forCellReuseIdentifier:@"reuseIdentifier"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -46,14 +48,17 @@
     return [self.shots count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+  return 200;
+}
+
+- (DSTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *ReuseIdentifier = @"reuseIdentifier";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
+  DSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
   Shot *shot = self.shots[indexPath.row];
-  cell.textLabel.text = [shot title];
-  cell.detailTextLabel.text = [shot imageURL];
+  [cell populateWithShot:shot];
   
-    return cell;
+  return cell;
 }
 
 /*

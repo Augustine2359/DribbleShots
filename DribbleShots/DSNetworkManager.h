@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIImageView.h>
 
 typedef enum {
   DribbleShotTypeDebuts = 0,
@@ -20,6 +21,7 @@ typedef enum {
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
                 onPage:(NSInteger)page
                success:(void (^)(NSArray *))success;
-
+- (void)setImageWithURLString:(NSString *)urlString
+                 forImageView:(UIImageView *)imageView;
 
 @end

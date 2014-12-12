@@ -8,6 +8,7 @@
 
 #import "DSTableViewCell.h"
 
+
 @interface DSTableViewCell()
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
@@ -29,6 +30,7 @@
 
 - (void)populateWithShot:(Shot *)shot {
   self.titleLabel.text = [shot title];
+  [[DSNetworkManager sharedInstance] setImageWithURLString:[shot imageURL] forImageView:self.smallImageView];
 }
 
 @end
