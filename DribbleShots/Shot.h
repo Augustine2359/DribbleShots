@@ -18,5 +18,6 @@
 @property (nonatomic, retain) NSDate * createdAt;
 @property (nonatomic, retain) NSString * playerName;
 @property (nonatomic, retain) NSNumber * likes;
+@property (nonatomic, retain) NSNumber * idNumber;
 
 @end

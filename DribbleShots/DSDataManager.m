@@ -44,7 +44,15 @@
 }
 
 - (void)addShotsToModel:(NSArray *)shots shotType:(DribbleShotType)dribbleShotType {
+  NSError * error;
+  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Shot"];
+  fetchRequest.fetchLimit = 1;
   for (NSDictionary *shotDictionary in shots) {
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"idNumber == %@", shotDictionary[@"id"]];
+    if ([self.context countForFetchRequest:fetchRequest error:&error] > 0) {
+      continue;
+    }
+
     NSEntityDescription *shotEntityDescription = [NSEntityDescription entityForName:@"Shot"
                                                          inManagedObjectContext:self.context];
     Shot *shot = [[Shot alloc] initWithEntity:shotEntityDescription
@@ -55,6 +63,7 @@
     shot.createdAt = [self.dateFormatter dateFromString:shotDictionary[@"created_at"]];
     shot.likes = shotDictionary[@"likes_count"];
     shot.playerName = shotDictionary[@"player"][@"name"];
+    shot.idNumber = shotDictionary[@"id"];
   }
 }
 
@@ -66,7 +75,8 @@
                                                                                              managedObjectContext:self.context
                                                                                                sectionNameKeyPath:nil
                                                                                                         cacheName:nil];
-  [fetchedResultsController performFetch:nil];
+  NSError * error;
+  [fetchedResultsController performFetch:&error];
   return [fetchedResultsController fetchedObjects];
 }
 

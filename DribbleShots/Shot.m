@@ -17,5 +17,6 @@
 @dynamic createdAt;
 @dynamic playerName;
 @dynamic likes;
+@dynamic idNumber;
 
 @end
