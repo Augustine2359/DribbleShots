@@ -24,6 +24,7 @@
 		F923CF9A1A3AEDE70029C1F2 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF991A3AEDE70029C1F2 /* Shot.m */; };
 		F923CF9E1A3AF4BC0029C1F2 /* DSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF9C1A3AF4BC0029C1F2 /* DSTableViewCell.m */; };
 		F923CF9F1A3AF4BC0029C1F2 /* DSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F923CF9D1A3AF4BC0029C1F2 /* DSTableViewCell.xib */; };
+		F923CFAC1A3AFE3A0029C1F2 /* DSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CFAB1A3AFE3A0029C1F2 /* DSDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		F923CF9B1A3AF4BC0029C1F2 /* DSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewCell.h; sourceTree = "<group>"; };
 		F923CF9C1A3AF4BC0029C1F2 /* DSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewCell.m; sourceTree = "<group>"; };
 		F923CF9D1A3AF4BC0029C1F2 /* DSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSTableViewCell.xib; sourceTree = "<group>"; };
+		F923CFAA1A3AFE3A0029C1F2 /* DSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDetailViewController.h; sourceTree = "<group>"; };
+		F923CFAB1A3AFE3A0029C1F2 /* DSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDetailViewController.m; sourceTree = "<group>"; };
 		FA1A40F1533A0088B7343634 /* libPods-DribbleShots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbleShots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 				F923CF9B1A3AF4BC0029C1F2 /* DSTableViewCell.h */,
 				F923CF9C1A3AF4BC0029C1F2 /* DSTableViewCell.m */,
 				F923CF9D1A3AF4BC0029C1F2 /* DSTableViewCell.xib */,
+				F923CFAA1A3AFE3A0029C1F2 /* DSDetailViewController.h */,
+				F923CFAB1A3AFE3A0029C1F2 /* DSDetailViewController.m */,
 				F923CF721A3AD50A0029C1F2 /* DSNetworkManager.h */,
 				F923CF731A3AD50A0029C1F2 /* DSNetworkManager.m */,
 				F923CF7E1A3AE35B0029C1F2 /* DSDataManager.h */,
@@ -326,6 +331,7 @@
 				F923CF741A3AD50A0029C1F2 /* DSNetworkManager.m in Sources */,
 				F923CF771A3ADF720029C1F2 /* DSNavigationViewController.m in Sources */,
 				F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */,
+				F923CFAC1A3AFE3A0029C1F2 /* DSDetailViewController.m in Sources */,
 				F923CF9A1A3AEDE70029C1F2 /* Shot.m in Sources */,
 				F923CF7A1A3AE0FA0029C1F2 /* DSTableViewController.m in Sources */,
 				F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */,
