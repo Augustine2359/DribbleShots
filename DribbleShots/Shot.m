@@ -15,5 +15,7 @@
 @dynamic imageURL;
 @dynamic dribbleShotType;
 @dynamic createdAt;
+@dynamic playerName;
+@dynamic likes;
 
 @end

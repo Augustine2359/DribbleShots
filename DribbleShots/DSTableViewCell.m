@@ -12,6 +12,8 @@
 @interface DSTableViewCell()
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *likesLabel;
+@property (nonatomic, strong) IBOutlet UILabel *playerNameLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *smallImageView;
 
 @end
@@ -30,6 +32,8 @@
 
 - (void)populateWithShot:(Shot *)shot {
   self.titleLabel.text = [shot title];
+  self.likesLabel.text = [NSString stringWithFormat:@"%@ likes", [shot likes]];
+  self.playerNameLabel.text = [shot playerName];
   [[DSNetworkManager sharedInstance] setImageWithURLString:[shot imageURL] forImageView:self.smallImageView];
 }
 

@@ -53,6 +53,8 @@
     shot.imageURL = shotDictionary[@"image_url"];
     shot.dribbleShotType = [NSNumber numberWithInteger:dribbleShotType];
     shot.createdAt = [self.dateFormatter dateFromString:shotDictionary[@"created_at"]];
+    shot.likes = shotDictionary[@"likes_count"];
+    shot.playerName = shotDictionary[@"player"][@"name"];
   }
 }
 
