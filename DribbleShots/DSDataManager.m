@@ -70,7 +70,7 @@
 - (NSArray *)getShotsOfType:(DribbleShotType)dribbleShotType {
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Shot"];
   fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dribbleShotType == %@", [NSNumber numberWithInteger:dribbleShotType]];
-  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]];
+  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"idNumber" ascending:NO]];
   NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                              managedObjectContext:self.context
                                                                                                sectionNameKeyPath:nil
