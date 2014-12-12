@@ -59,7 +59,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 200;
+  if (indexPath.row == [self.shots count])
+    return 0;
+  else
+    return 200;
 }
 
 - (DSTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,6 +85,7 @@
         self.hasDownloadedEverything = YES;
       }
     }];
+    [cell populateWithShot:nil];
     return cell;
   }
 

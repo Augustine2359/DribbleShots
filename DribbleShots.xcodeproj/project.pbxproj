@@ -24,7 +24,7 @@
 		F923CF9E1A3AF4BC0029C1F2 /* DSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF9C1A3AF4BC0029C1F2 /* DSTableViewCell.m */; };
 		F923CF9F1A3AF4BC0029C1F2 /* DSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F923CF9D1A3AF4BC0029C1F2 /* DSTableViewCell.xib */; };
 		F923CFAC1A3AFE3A0029C1F2 /* DSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CFAB1A3AFE3A0029C1F2 /* DSDetailViewController.m */; };
-		F923CFB21A3B0BF70029C1F2 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CFB11A3B0BF70029C1F2 /* Shot.m */; };
+		F923CFB51A3B13DF0029C1F2 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CFB41A3B13DF0029C1F2 /* Shot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		F923CF9D1A3AF4BC0029C1F2 /* DSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSTableViewCell.xib; sourceTree = "<group>"; };
 		F923CFAA1A3AFE3A0029C1F2 /* DSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDetailViewController.h; sourceTree = "<group>"; };
 		F923CFAB1A3AFE3A0029C1F2 /* DSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDetailViewController.m; sourceTree = "<group>"; };
-		F923CFB01A3B0BF70029C1F2 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
-		F923CFB11A3B0BF70029C1F2 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		F923CFB31A3B13DF0029C1F2 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		F923CFB41A3B13DF0029C1F2 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
 		FA1A40F1533A0088B7343634 /* libPods-DribbleShots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbleShots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,8 +153,8 @@
 				F923CF7E1A3AE35B0029C1F2 /* DSDataManager.h */,
 				F923CF7F1A3AE35B0029C1F2 /* DSDataManager.m */,
 				F923CF7B1A3AE2940029C1F2 /* DSModel.xcdatamodeld */,
-				F923CFB01A3B0BF70029C1F2 /* Shot.h */,
-				F923CFB11A3B0BF70029C1F2 /* Shot.m */,
+				F923CFB31A3B13DF0029C1F2 /* Shot.h */,
+				F923CFB41A3B13DF0029C1F2 /* Shot.m */,
 				F923CF491A3ACCC50029C1F2 /* Main.storyboard */,
 				F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */,
 				F923CF4E1A3ACCC50029C1F2 /* LaunchScreen.xib */,
@@ -334,7 +334,7 @@
 				F923CFAC1A3AFE3A0029C1F2 /* DSDetailViewController.m in Sources */,
 				F923CF7A1A3AE0FA0029C1F2 /* DSTableViewController.m in Sources */,
 				F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */,
-				F923CFB21A3B0BF70029C1F2 /* Shot.m in Sources */,
+				F923CFB51A3B13DF0029C1F2 /* Shot.m in Sources */,
 				F923CF801A3AE35B0029C1F2 /* DSDataManager.m in Sources */,
 				F923CF9E1A3AF4BC0029C1F2 /* DSTableViewCell.m in Sources */,
 				F923CF7D1A3AE2940029C1F2 /* DSModel.xcdatamodeld in Sources */,

@@ -46,13 +46,17 @@
 - (void)addShotsToModel:(NSArray *)shots shotType:(DribbleShotType)dribbleShotType {
   NSError * error;
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Shot"];
-  fetchRequest.fetchLimit = 1;
   for (NSDictionary *shotDictionary in shots) {
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"idNumber == %@", shotDictionary[@"id"]];
+    fetchRequest.fetchLimit = 1;
     if ([self.context countForFetchRequest:fetchRequest error:&error] > 0) {
       continue;
     }
 
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dribbleShotType == %@", [NSNumber numberWithInteger:dribbleShotType]];
+    fetchRequest.fetchLimit = 0;
+    NSInteger existingRecordsCount = [self.context countForFetchRequest:fetchRequest error:&error];
+    
     NSEntityDescription *shotEntityDescription = [NSEntityDescription entityForName:@"Shot"
                                                          inManagedObjectContext:self.context];
     Shot *shot = [[Shot alloc] initWithEntity:shotEntityDescription
@@ -64,13 +68,15 @@
     shot.likes = shotDictionary[@"likes_count"];
     shot.playerName = shotDictionary[@"player"][@"name"];
     shot.idNumber = shotDictionary[@"id"];
+    shot.order = [NSNumber numberWithInteger:existingRecordsCount];
+    DLog(@"%@", shot);
   }
 }
 
 - (NSArray *)getShotsOfType:(DribbleShotType)dribbleShotType {
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Shot"];
   fetchRequest.predicate = [NSPredicate predicateWithFormat:@"dribbleShotType == %@", [NSNumber numberWithInteger:dribbleShotType]];
-  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"idNumber" ascending:NO]];
+  fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]];
   NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                              managedObjectContext:self.context
                                                                                                sectionNameKeyPath:nil

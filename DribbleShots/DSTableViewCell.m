@@ -31,6 +31,13 @@
 }
 
 - (void)populateWithShot:(Shot *)shot {
+  self.smallImageView.image = nil;
+  if (shot == nil) {
+    self.titleLabel.text = nil;
+    self.likesLabel.text = nil;
+    self.playerNameLabel.text = nil;
+    return;
+  }
   self.titleLabel.text = [shot title];
   self.likesLabel.text = [NSString stringWithFormat:@"%@ likes", [shot likes]];
   self.playerNameLabel.text = [shot playerName];

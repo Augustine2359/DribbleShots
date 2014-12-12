@@ -18,5 +18,6 @@
 @dynamic playerName;
 @dynamic likes;
 @dynamic idNumber;
+@dynamic order;
 
 @end

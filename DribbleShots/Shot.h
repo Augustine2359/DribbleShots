@@ -19,5 +19,6 @@
 @property (nonatomic, retain) NSString * playerName;
 @property (nonatomic, retain) NSNumber * likes;
 @property (nonatomic, retain) NSNumber * idNumber;
+@property (nonatomic, retain) NSNumber * order;
 
 @end
