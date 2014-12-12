@@ -30,9 +30,10 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
   DribbleShotType dribbleShotType = [self.viewControllers indexOfObject:viewController];
   DLog(@"%d", dribbleShotType);
-  [[DSNetworkManager sharedInstance] getShotsOfType:DribbleShotTypePopular success:^(NSArray *shots) {
-    ;
-  }];
+  [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
+                                             onPage:2 success:^(NSArray *shots) {
+                                               ;
+                                             }];
 }
 
 /*

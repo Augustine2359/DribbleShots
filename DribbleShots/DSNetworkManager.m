@@ -20,6 +20,7 @@
 }
 
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
+                onPage:(NSInteger)page
                success:(void (^)(NSArray *))success {
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   NSString *urlString;
@@ -36,8 +37,11 @@
     default:
       break;
   }
+  
+  NSDictionary *parameters = @{@"page": [NSNumber numberWithInteger:page]};
+  
   [manager GET:urlString
-    parameters:nil
+    parameters:parameters
        success:^(AFHTTPRequestOperation *operation, id responseObject) {
          DLog(@"%@", operation);
          DLog(@"%@", responseObject);

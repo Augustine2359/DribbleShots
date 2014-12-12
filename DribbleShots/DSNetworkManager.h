@@ -18,6 +18,7 @@ typedef enum {
 
 + (instancetype)sharedInstance;
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
+                onPage:(NSInteger)page
                success:(void (^)(NSArray *))success;
 
 
