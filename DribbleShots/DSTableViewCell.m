@@ -33,4 +33,8 @@
   [[DSNetworkManager sharedInstance] setImageWithURLString:[shot imageURL] forImageView:self.smallImageView];
 }
 
+- (UIImage *)imageInCell {
+  return [self.smallImageView image];
+}
+
 @end

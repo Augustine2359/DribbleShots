@@ -11,5 +11,6 @@
 @interface DSTableViewCell : UITableViewCell
 
 - (void)populateWithShot:(Shot *)shot;
+- (UIImage *)imageInCell;
 
 @end

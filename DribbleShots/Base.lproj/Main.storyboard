@@ -55,19 +55,36 @@
             </objects>
             <point key="canvasLocation" x="1536" y="-548"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="xkS-cB-jtn">
             <objects>
-                <viewController id="2eI-wu-bsd" sceneMemberID="viewController">
+                <viewController id="2eI-wu-bsd" customClass="DSDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IiL-sL-flq"/>
                         <viewControllerLayoutGuide type="bottom" id="jAQ-13-REj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zcv-6k-ZNj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7og-nj-PO4">
+                                <rect key="frame" x="0.0" y="340" width="320" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cL-oF-XS8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="268"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="1cL-oF-XS8" id="C36-mz-rJb"/>
+                        <outlet property="titleLabel" destination="7og-nj-PO4" id="lJl-Xh-xuL"/>
+                        <outlet property="view" destination="Zcv-6k-ZNj" id="n5D-Hh-jnf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJv-j3-Jns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

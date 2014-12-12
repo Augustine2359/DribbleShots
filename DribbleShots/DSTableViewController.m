@@ -8,6 +8,7 @@
 
 #import "DSTableViewController.h"
 #import "DSTableViewCell.h"
+#import "DSDetailViewController.h"
 
 @interface DSTableViewController ()
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
   UINib *nib = [UINib nibWithNibName:@"DSTableViewCell" bundle:[NSBundle mainBundle]];
   [self.tableView registerNib:nib forCellReuseIdentifier:@"reuseIdentifier"];
     // Uncomment the following line to preserve selection between presentations.
@@ -62,7 +64,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [self performSegueWithIdentifier:@"push" sender:self];
+  [self performSegueWithIdentifier:@"push" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  DSDetailViewController *detailVC = (DSDetailViewController *)segue.destinationViewController;
+  NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+  Shot *shot = self.shots[selectedIndexPath.row];
+  DSTableViewCell *cell = (DSTableViewCell *)[self.tableView cellForRowAtIndexPath:selectedIndexPath];
+  UIImage *image = [cell imageInCell];
+  [detailVC populateWithShot:shot andImage:image];
 }
 
 /*
