@@ -40,7 +40,7 @@
   [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
                                              onPage:1 success:^(NSArray *shots) {
                                                [[DSDataManager sharedInstance] getShotsOfType:dribbleShotType];
-                                             }];
+                                             } failure:nil];
 }
 
 - (void)loadShotsOfType:(DribbleShotType)dribbleShotType {
@@ -49,7 +49,7 @@
                                             success:^(NSArray *shots) {
                                               DSNavigationViewController *navigationViewController = (DSNavigationViewController *)self.selectedViewController;
                                               [navigationViewController loadTableWithShotsOfType:dribbleShotType];
-                                            }];
+                                            } failure:nil];
 }
 
 /*

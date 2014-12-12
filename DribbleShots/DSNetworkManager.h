@@ -20,7 +20,8 @@ typedef enum {
 + (instancetype)sharedInstance;
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
                 onPage:(NSInteger)page
-               success:(void (^)(NSArray *))success;
+               success:(void (^)(NSArray *))success
+               failure:(void (^)(NSError *))failure;
 - (void)setImageWithURLString:(NSString *)urlString
                  forImageView:(UIImageView *)imageView;
 

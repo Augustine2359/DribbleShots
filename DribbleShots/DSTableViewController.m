@@ -12,7 +12,9 @@
 
 @interface DSTableViewController ()
 
+@property (nonatomic) DribbleShotType dribbleShotType;
 @property (nonatomic, strong) NSArray *shots;
+@property (nonatomic) BOOL hasDownloadedEverything;
 
 @end
 
@@ -20,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  self.hasDownloadedEverything = NO;
   
   UINib *nib = [UINib nibWithNibName:@"DSTableViewCell" bundle:[NSBundle mainBundle]];
   [self.tableView registerNib:nib forCellReuseIdentifier:@"reuseIdentifier"];
@@ -36,6 +40,7 @@
 }
 
 - (void)loadTableWithShotsOfType:(DribbleShotType)dribbleShotType {
+  self.dribbleShotType = dribbleShotType;
   self.shots = [[DSDataManager sharedInstance] getShotsOfType:dribbleShotType];
   [self.tableView reloadData];
 }
@@ -47,7 +52,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  if (self.hasDownloadedEverything)
     return [self.shots count];
+  else
+    return [self.shots count] + 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,6 +65,26 @@
 - (DSTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *ReuseIdentifier = @"reuseIdentifier";
   DSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
+
+  if (indexPath.row == [self.shots count]) {
+    NSInteger pageNumber = indexPath.row / PAGES_PER_API_CALL + 1;
+    [[DSNetworkManager sharedInstance] getShotsOfType:self.dribbleShotType
+                                               onPage:pageNumber
+                                              success:^(NSArray *newShots) {
+      if ([newShots count] < 1) {
+        self.hasDownloadedEverything = YES;
+      }
+      self.shots = [[DSDataManager sharedInstance] getShotsOfType:self.dribbleShotType];
+      [self.tableView reloadData];
+    } failure:^(NSError *error) {
+      //Assume that this means reached the end of pagination
+      if ([error code] == -1011) {
+        self.hasDownloadedEverything = YES;
+      }
+    }];
+    return cell;
+  }
+
   Shot *shot = self.shots[indexPath.row];
   [cell populateWithShot:shot];
   

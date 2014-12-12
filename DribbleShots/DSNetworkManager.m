@@ -22,7 +22,8 @@
 
 - (void)getShotsOfType:(DribbleShotType)dribbleShotType
                 onPage:(NSInteger)page
-               success:(void (^)(NSArray *))success {
+               success:(void (^)(NSArray *))success
+               failure:(void (^)(NSError *))failure {
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   NSString *urlString;
   switch (dribbleShotType) {
@@ -49,11 +50,10 @@
          
          if (success)
            success(shots);
-         
        }
        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         DLog(@"%@", operation);
-         DLog(@"%@", error);
+         if (failure)
+           failure(error);
        }];
 }
 
