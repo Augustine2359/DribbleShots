@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  PopularViewController.h
 //  DribbleShots
 //
 //  Created by Augustine on 12/12/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EveryoneViewController : UIViewController
-
+@interface DSPopularViewController : UIViewController
 
 @end
-

@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF3E1A3ACCC40029C1F2 /* main.m */; };
 		F923CF421A3ACCC50029C1F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF411A3ACCC50029C1F2 /* AppDelegate.m */; };
-		F923CF451A3ACCC50029C1F2 /* DebutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF441A3ACCC50029C1F2 /* DebutsViewController.m */; };
-		F923CF481A3ACCC50029C1F2 /* EveryoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF471A3ACCC50029C1F2 /* EveryoneViewController.m */; };
+		F923CF451A3ACCC50029C1F2 /* DSDebutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF441A3ACCC50029C1F2 /* DSDebutsViewController.m */; };
+		F923CF481A3ACCC50029C1F2 /* DSEveryoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF471A3ACCC50029C1F2 /* DSEveryoneViewController.m */; };
 		F923CF4B1A3ACCC50029C1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F923CF491A3ACCC50029C1F2 /* Main.storyboard */; };
 		F923CF4D1A3ACCC50029C1F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */; };
 		F923CF501A3ACCC50029C1F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F923CF4E1A3ACCC50029C1F2 /* LaunchScreen.xib */; };
 		F923CF5C1A3ACCC50029C1F2 /* DribbleShotsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF5B1A3ACCC50029C1F2 /* DribbleShotsTests.m */; };
-		F923CF671A3ACE000029C1F2 /* PopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF661A3ACE000029C1F2 /* PopularViewController.m */; };
+		F923CF671A3ACE000029C1F2 /* DSPopularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF661A3ACE000029C1F2 /* DSPopularViewController.m */; };
+		F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F923CF6D1A3AD0F60029C1F2 /* DSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,18 +35,20 @@
 		F923CF3E1A3ACCC40029C1F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F923CF401A3ACCC40029C1F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F923CF411A3ACCC50029C1F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F923CF431A3ACCC50029C1F2 /* DebutsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebutsViewController.h; sourceTree = "<group>"; };
-		F923CF441A3ACCC50029C1F2 /* DebutsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebutsViewController.m; sourceTree = "<group>"; };
-		F923CF461A3ACCC50029C1F2 /* EveryoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EveryoneViewController.h; sourceTree = "<group>"; };
-		F923CF471A3ACCC50029C1F2 /* EveryoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryoneViewController.m; sourceTree = "<group>"; };
+		F923CF431A3ACCC50029C1F2 /* DSDebutsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDebutsViewController.h; sourceTree = "<group>"; };
+		F923CF441A3ACCC50029C1F2 /* DSDebutsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDebutsViewController.m; sourceTree = "<group>"; };
+		F923CF461A3ACCC50029C1F2 /* DSEveryoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSEveryoneViewController.h; sourceTree = "<group>"; };
+		F923CF471A3ACCC50029C1F2 /* DSEveryoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSEveryoneViewController.m; sourceTree = "<group>"; };
 		F923CF4A1A3ACCC50029C1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F923CF4F1A3ACCC50029C1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F923CF551A3ACCC50029C1F2 /* DribbleShotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbleShotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F923CF5A1A3ACCC50029C1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F923CF5B1A3ACCC50029C1F2 /* DribbleShotsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbleShotsTests.m; sourceTree = "<group>"; };
-		F923CF661A3ACE000029C1F2 /* PopularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularViewController.m; sourceTree = "<group>"; };
-		F923CF681A3ACE170029C1F2 /* PopularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularViewController.h; sourceTree = "<group>"; };
+		F923CF661A3ACE000029C1F2 /* DSPopularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPopularViewController.m; sourceTree = "<group>"; };
+		F923CF681A3ACE170029C1F2 /* DSPopularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPopularViewController.h; sourceTree = "<group>"; };
+		F923CF6C1A3AD0F60029C1F2 /* DSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTabBarController.h; sourceTree = "<group>"; };
+		F923CF6D1A3AD0F60029C1F2 /* DSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +92,14 @@
 			children = (
 				F923CF401A3ACCC40029C1F2 /* AppDelegate.h */,
 				F923CF411A3ACCC50029C1F2 /* AppDelegate.m */,
-				F923CF431A3ACCC50029C1F2 /* DebutsViewController.h */,
-				F923CF441A3ACCC50029C1F2 /* DebutsViewController.m */,
-				F923CF461A3ACCC50029C1F2 /* EveryoneViewController.h */,
-				F923CF471A3ACCC50029C1F2 /* EveryoneViewController.m */,
-				F923CF681A3ACE170029C1F2 /* PopularViewController.h */,
-				F923CF661A3ACE000029C1F2 /* PopularViewController.m */,
+				F923CF6C1A3AD0F60029C1F2 /* DSTabBarController.h */,
+				F923CF6D1A3AD0F60029C1F2 /* DSTabBarController.m */,
+				F923CF431A3ACCC50029C1F2 /* DSDebutsViewController.h */,
+				F923CF441A3ACCC50029C1F2 /* DSDebutsViewController.m */,
+				F923CF461A3ACCC50029C1F2 /* DSEveryoneViewController.h */,
+				F923CF471A3ACCC50029C1F2 /* DSEveryoneViewController.m */,
+				F923CF681A3ACE170029C1F2 /* DSPopularViewController.h */,
+				F923CF661A3ACE000029C1F2 /* DSPopularViewController.m */,
 				F923CF491A3ACCC50029C1F2 /* Main.storyboard */,
 				F923CF4C1A3ACCC50029C1F2 /* Images.xcassets */,
 				F923CF4E1A3ACCC50029C1F2 /* LaunchScreen.xib */,
@@ -173,6 +178,7 @@
 		F923CF311A3ACCC40029C1F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DS;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Augustine;
 				TargetAttributes = {
@@ -229,10 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F923CF671A3ACE000029C1F2 /* PopularViewController.m in Sources */,
-				F923CF481A3ACCC50029C1F2 /* EveryoneViewController.m in Sources */,
+				F923CF671A3ACE000029C1F2 /* DSPopularViewController.m in Sources */,
+				F923CF481A3ACCC50029C1F2 /* DSEveryoneViewController.m in Sources */,
 				F923CF421A3ACCC50029C1F2 /* AppDelegate.m in Sources */,
-				F923CF451A3ACCC50029C1F2 /* DebutsViewController.m in Sources */,
+				F923CF451A3ACCC50029C1F2 /* DSDebutsViewController.m in Sources */,
+				F923CF6E1A3AD0F60029C1F2 /* DSTabBarController.m in Sources */,
 				F923CF3F1A3ACCC40029C1F2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +433,7 @@
 				F923CF611A3ACCC50029C1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F923CF621A3ACCC50029C1F2 /* Build configuration list for PBXNativeTarget "DribbleShotsTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +442,7 @@
 				F923CF641A3ACCC50029C1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

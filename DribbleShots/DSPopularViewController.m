@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Augustine. All rights reserved.
 //
 
-#import "EveryoneViewController.h"
+#import "DSPopularViewController.h"
 
-@interface EveryoneViewController ()
+@interface DSPopularViewController ()
 
 @end
 
-@implementation EveryoneViewController
+@implementation DSPopularViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

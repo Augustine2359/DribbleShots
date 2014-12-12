@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  DribbleShots
 //
 //  Created by Augustine on 12/12/14.
 //  Copyright (c) 2014 Augustine. All rights reserved.
 //
 
-#import "DebutsViewController.h"
+#import "DSEveryoneViewController.h"
 
-@interface DebutsViewController ()
+@interface DSEveryoneViewController ()
 
 @end
 
-@implementation DebutsViewController
+@implementation DSEveryoneViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

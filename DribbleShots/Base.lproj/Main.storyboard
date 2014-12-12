@@ -8,7 +8,7 @@
         <!--Debuts-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Debuts" id="9pv-A4-QxB" customClass="DebutsViewController" sceneMemberID="viewController">
+                <viewController title="Debuts" id="9pv-A4-QxB" customClass="DSDebutsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -48,7 +48,7 @@
         <!--Everyone-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Everyone" id="8rJ-Kc-sve" customClass="EveryoneViewController" sceneMemberID="viewController">
+                <viewController title="Everyone" id="8rJ-Kc-sve" customClass="DSEveryoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -88,7 +88,7 @@
         <!--Popular-->
         <scene sceneID="Eji-8C-bLv">
             <objects>
-                <viewController title="Popular" id="o4q-RC-CSJ" customClass="PopularViewController" sceneMemberID="viewController">
+                <viewController title="Popular" id="o4q-RC-CSJ" customClass="DSPopularViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fla-Ky-Tq6"/>
                         <viewControllerLayoutGuide type="bottom" id="Jtw-oB-n4r"/>
@@ -107,7 +107,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="DSTabBarController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

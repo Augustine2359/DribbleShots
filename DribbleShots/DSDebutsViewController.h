@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DebutsViewController : UIViewController
+@interface DSDebutsViewController : UIViewController
 
 
 @end
