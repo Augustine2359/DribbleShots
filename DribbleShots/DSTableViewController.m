@@ -10,6 +10,8 @@
 
 @interface DSTableViewController ()
 
+@property (nonatomic, strong) NSArray *shots;
+
 @end
 
 @implementation DSTableViewController
@@ -24,39 +26,35 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadTableWithShotsOfType:(DribbleShotType)dribbleShotType {
+  self.shots = [[DSDataManager sharedInstance] getShotsOfType:dribbleShotType];
+  [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.shots count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//  static NSString *ReuseIdentifier = @"reuseIdentifier";
+//  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
+//  Shot *shot = self.shots[indexPath.row];
+//  cell.textLabel.text = [shot title];
+//  cell.detailTextLabel.text = [shot imageURL];
+//  
+//    return cell;
+//}
 
 /*
 // Override to support conditional editing of the table view.

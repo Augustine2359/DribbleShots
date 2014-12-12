@@ -10,4 +10,6 @@
 
 @interface DSNavigationViewController : UINavigationController
 
+- (void)loadTableWithShotsOfType:(DribbleShotType)dribbleShotType;
+
 @end

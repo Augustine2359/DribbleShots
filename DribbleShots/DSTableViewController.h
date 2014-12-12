@@ -10,4 +10,6 @@
 
 @interface DSTableViewController : UITableViewController
 
+- (void)loadTableWithShotsOfType:(DribbleShotType)dribbleShotType;
+
 @end

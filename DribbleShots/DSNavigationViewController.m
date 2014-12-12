@@ -7,6 +7,7 @@
 //
 
 #import "DSNavigationViewController.h"
+#import "DSTableViewController.h"
 
 @interface DSNavigationViewController ()
 
@@ -16,12 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadTableWithShotsOfType:(DribbleShotType)dribbleShotType {
+  DSTableViewController *tableViewController = self.viewControllers[0];
+  [tableViewController loadTableWithShotsOfType:dribbleShotType];
 }
 
 /*

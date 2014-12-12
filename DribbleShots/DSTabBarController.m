@@ -7,6 +7,8 @@
 //
 
 #import "DSTabBarController.h"
+#import "DSNavigationViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DSTabBarController () <UITabBarControllerDelegate>
 
@@ -22,6 +24,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [self loadShotsOfType:DribbleShotTypeDebuts];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -29,12 +35,21 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
   DribbleShotType dribbleShotType = [self.viewControllers indexOfObject:viewController];
-  DLog(@"%d", dribbleShotType);
+  [self loadShotsOfType:dribbleShotType];
+  
   [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
                                              onPage:1 success:^(NSArray *shots) {
                                                [[DSDataManager sharedInstance] getShotsOfType:dribbleShotType];
-//                                               DLog(@"%@", shots);
                                              }];
+}
+
+- (void)loadShotsOfType:(DribbleShotType)dribbleShotType {
+  [[DSNetworkManager sharedInstance] getShotsOfType:dribbleShotType
+                                             onPage:1
+                                            success:^(NSArray *shots) {
+                                              DSNavigationViewController *navigationViewController = (DSNavigationViewController *)self.selectedViewController;
+                                              [navigationViewController loadTableWithShotsOfType:dribbleShotType];
+                                            }];
 }
 
 /*
