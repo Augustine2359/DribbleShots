@@ -46,15 +46,15 @@
     return [self.shots count];
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//  static NSString *ReuseIdentifier = @"reuseIdentifier";
-//  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
-//  Shot *shot = self.shots[indexPath.row];
-//  cell.textLabel.text = [shot title];
-//  cell.detailTextLabel.text = [shot imageURL];
-//  
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *ReuseIdentifier = @"reuseIdentifier";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
+  Shot *shot = self.shots[indexPath.row];
+  cell.textLabel.text = [shot title];
+  cell.detailTextLabel.text = [shot imageURL];
+  
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
